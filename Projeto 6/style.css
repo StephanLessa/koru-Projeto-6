@@ -42,7 +42,7 @@ h1 {
 label {
     display: block;
     text-align: left;
-    margin: 8px 0 5px;
+    margin: 5px 0 5px;
     font-weight: bold;
 }
 input {
@@ -65,7 +65,7 @@ button {
     cursor: pointer;
 }
 button:hover {
-    background-color: #1e4bb8;
+    background-color: #681eb8;
 }
 
 /* Área da resposta */
