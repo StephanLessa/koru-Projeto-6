@@ -1,86 +1,92 @@
 /* Estilo geral */
 body {
-    font-family: Arial, sans-serif;
-    background-color: #f0f2f5;
-    margin: 0;
-    padding: 0;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+  font-family: Arial, sans-serif;
+  background-color: #f0f2f5;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 /* Cabeçalho com nome do grupo */
 header {
-    background-color: #1e1e1e;
-    width: 100%;
-    padding: 15px;
-    text-align: center;
+  background-color: #1e1e1e;
+  width: 100%;
+  padding: 15px;
+  text-align: center;
 }
 #grupo-nome {
-    color: #fff;
-    font-size: 1.8rem;
-    margin: 0;
+  color: #fff;
+  font-size: 1.8rem;
+  margin: 0;
 }
 
 /* Conteúdo principal */
 #conteudo-principal {
-    background-color: white;
-    padding: 25px;
-    margin-top: 40px;
-    border-radius: 12px;
-    box-shadow: 0px 4px 12px rgba(0,0,0,0.1);
-    width: 350px;
-    text-align: center;
+  background-color: white;
+  padding: 25px;
+  margin-top: 40px;
+  border-radius: 12px;
+  box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
+  width: 350px;
+  text-align: center;
 }
 
 h1 {
-    font-size: 1.6rem;
-    margin-bottom: 20px;
+  font-size: 1.6rem;
+  margin-bottom: 20px;
 }
 
 /* Campos do formulário */
 label {
-    display: block;
-    text-align: left;
-    margin: 5px 0 5px;
-    font-weight: bold;
+  display: block;
+  text-align: left;
+  margin: 5px 0 5px;
+  font-weight: bold;
 }
 input {
-    width: 100%;
-    padding: 10px;
-    margin-bottom: 12px;
-    border: 1px solid #ccc;
-    border-radius: 6px;
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 12px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
 }
 
 /* Botão */
 button {
-    width: 100%;
-    padding: 10px;
-    background-color: #2563eb;
-    color: white;
-    font-size: 1rem;
-    border: none;
-    border-radius: 6px;
-    cursor: pointer;
+  width: 100%;
+  padding: 10px;
+  background-color: #2563eb;
+  color: white;
+  font-size: 1rem;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
 }
 button:hover {
-    background-color: #681eb8;
+  background-color: #681eb8;
 }
 
 /* Área da resposta */
 #resposta-container {
-    margin-top: 20px;
-    text-align: left;
+  margin-top: 20px;
+  text-align: left;
+}
+
+#resposta {
+  white-space: pre-wrap;
+  line-height: 1.6;
+  margin-top: 10px;
 }
 
 /* Rodapé */
 footer {
-    margin-top: 30px;
-    padding: 15px;
-    text-align: center;
-    font-size: 0.9rem;
-    background-color: #1e1e1e;
-    color: white;
-    width: 100%;
+  margin-top: 30px;
+  padding: 15px;
+  text-align: center;
+  font-size: 0.9rem;
+  background-color: #1e1e1e;
+  color: white;
+  width: 100%;
 }
