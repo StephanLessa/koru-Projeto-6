@@ -5,49 +5,51 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Os Vanguardistas - Assistente de IA</title>
     <link rel="stylesheet" href="style.css" />
+    
   </head>
-  <body>
-    <header>
-      <h2 id="grupo-nome">Os Vanguardistas!</h2>
-    </header>
 
-    <main id="conteudo-principal">
-      <h1>Assistente de IA</h1>
+  <body>
+    <div id="chat-window">
+      <header>
+        <h2 id="grupo-nome">Os Vanguardistas</h2>
+      </header>
+      
+      <h2 class="form-title"><strong>Assistente de IA</strong></h2>
 
       <section id="formulario">
-        <label for="apiKey">Chave da API:</label>
-        <input
-          type="password"
-          id="apiKey"
-          placeholder="Cole sua chave da API aqui"
-        />
-
-        <label for="pergunta">Pergunte:</label>
-        <input
-          type="text"
-          id="pergunta"
-          placeholder="Digite sua pergunta para a IA"
-        />
-
-        <button class="btn-gradiente">Clique Aqui</button>
+          <div>
+            <label for="apiKey">Chave da API:</label>
+            <div class="input-group">
+              <input
+                type="password"
+                id="apiKey"
+                placeholder="Cole sua chave da API aqui"
+                autocomplete="off"
+              />
+              <button class="btn-gradiente btn-invisivel">Salvar</button>
+            </div>
+          </div>
+          <div>
+            <label for="pergunta">Pergunte:</label>
+            <div class="input-group">
+              <input
+                type="text"
+                id="pergunta"
+                placeholder="Digite sua pergunta para a IA"
+                autocomplete="off"
+              />
+              <button class="btn-gradiente" id="enviarBtn">Enviar</button>
+            </div>
+          </div>
+        </section>
+        
+      <section id="resposta-container">
+       
       </section>
-
-      <section id="resposta-container" style="display: none">
-        <h2>Resposta da IA:</h2>
-        <p id="resposta"></p>
-      </section>
-    </main>
-
-    <footer>
-      <p>
-        Projeto 6 - Koru - Assistente de IA - Desenvolvido por:       
-        Kailany Sophia Pereira dos Santos, Sanna Santos Faria,
-        Mateus Wesley de Oliveira Freitas, Maria Aparecida da Silva Aranha,
-        Gabriel Ramalhão, Stephan Andrade Martins Lessa, Fernanda Iolanda da
-        Silva Rosas
-      </p>
-    </footer>
-
+      
+    
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
     <script src="script.js"></script>
   </body>
 </html>
