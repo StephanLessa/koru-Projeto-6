@@ -90,3 +90,80 @@ footer {
   color: white;
   width: 100%;
 }
+
+/* Responsividade Para telas pequenas (celulares) */
+@media (max-width: 600px) {
+  .navbar {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 10px 20px;
+  }
+
+  .navbar a {
+    font-size: 1rem;
+    margin: 5px 0;
+  }
+
+  .logo {
+    width: 40px;
+    margin-left: 0;
+  }
+
+  .content-section {
+    padding: 10px;
+    margin: 20px auto;
+  }
+
+  .page-header h1 {
+    font-size: 1.5rem;
+  }
+
+  .footer-button {
+    width: 100%;
+    text-align: center;
+    margin: 5px 0;
+  }
+
+  .page-footer {
+    flex-direction: column;
+    align-items: stretch;
+    padding: 10px 20px;
+  }
+}
+
+/* Para tablets */
+@media (min-width: 601px) and (max-width: 1024px) {
+  .navbar a {
+    font-size: 1.1rem;
+  }
+
+  .page-header h1 {
+    font-size: 2rem;
+  }
+
+  .content-section {
+    padding: 20px;
+  }
+
+  .footer-button {
+    padding: 12px 24px;
+  }
+}
+/* Para desktops */
+@media (min-width: 1025px) {
+  .navbar a {
+    font-size: 1.2rem;
+  }
+
+  .page-header h1 {
+    font-size: 2.5rem;
+  }
+
+  .content-section {
+    padding: 20px;
+  }
+
+  .footer-button {
+    padding: 14px 28px;
+  }
+}
