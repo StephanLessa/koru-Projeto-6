@@ -8,29 +8,27 @@ body {
   flex-direction: column;
   align-items: center;
 }
-
 /* Cabeçalho com nome do grupo */
-header {
+.chat-header {
   background-color: #1e1e1e;
-  width: 100%;
+  color: white;
   padding: 15px;
+  width: 90%;
   text-align: center;
-}
-#grupo-nome {
-  color: #fff;
-  font-size: 1.8rem;
-  margin: 0;
-}
+  border top left-radius: 12px;
+  border top right-radius: 12px;
+  }
 
-/* Conteúdo principal */
-#conteudo-principal {
-  background-color: white;
-  padding: 25px;
-  margin-top: 40px;
-  border-radius: 12px;
-  box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
-  width: 350px;
-  text-align: center;
+/* box chave api */
+.api-key-container {
+  padding: 15px;
+  width: 90%;
+  display: flex;
+  align-items: center;
+  color: #ffffff;
+  background-color: #1e1e1e;
+  flex-wrap: wrap;
+  gap: 10px;
 }
 
 h1 {
@@ -38,24 +36,17 @@ h1 {
   margin-bottom: 20px;
 }
 
-/* Campos do formulário */
-label {
-  display: block;
-  text-align: left;
-  margin: 5px 0 5px;
-  font-weight: bold;
-}
-input {
-  width: 100%;
-  padding: 10px;
-  margin-bottom: 12px;
-  border: 1px solid #ccc;
-  border-radius: 6px;
+/* Box  */
+.box-message {
+background-color:white (--bot-message-bg);
+color:black (--text-color);
+align-self: flex-start;
+border-radius: 5px 15px 15px 15px;
 }
 
 /* Botão */
 button {
-  width: 100%;
+  width: 50%;
   padding: 10px;
   background-color: #2563eb;
   color: white;
@@ -69,6 +60,7 @@ button:hover {
 }
 
 /* Área da resposta */
+
 #resposta-container {
   margin-top: 20px;
   text-align: left;
@@ -85,6 +77,7 @@ button:hover {
   margin-top: 15px;
   display: flex;
   gap: 10px;
+  flex-direction: column
   justify-content: flex-end;
 }
 
@@ -143,5 +136,5 @@ footer {
   font-size: 0.9rem;
   background-color: #1e1e1e;
   color: white;
-  width: 100%;
+  width: 90%;
 }

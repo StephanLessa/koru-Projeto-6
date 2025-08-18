@@ -1,66 +1,50 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
   <head>
-    <meta charset="UTF-8" />
+    <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Os Vanguardistas - Assistente de IA</title>
     <link rel="stylesheet" href="style.css" />
   </head>
    <body>
     <div id="chat-window">
-      <header>
-        <h2 id="grupo-nome">Os Vanguardistas</h2>
-      </header>
+      <div class="chat-header">
+        <h1>VangardAi</h1>
+        <h3>Seu assistente de IA :)</h3>
+      </div>
 
-      <h2 class="form-title"><strong>Assistente de IA</strong></h2>
-    </header>
-
-    <main id="conteudo-principal">
-      <h1>Assistente de IA</h1>
-
-      <section id="formulario">
-        <div>
+    <div class="api-key-container">
+       <section id="formulario">
+        <div >
           <label for="apiKey">Chave da API:</label>
-            <div class="input-group">
-              <input
-                type="password"
-                id="apiKey"
-                placeholder="Cole sua chave da API aqui"
-                autocomplete="off"
-              />
-              <button class="btn-gradiente btn-invisivel">Salvar</button>
-            </div>  
-        </div>
-          <label for="pergunta">Pergunte:</label>
-          <div class="input-group">
-              <textarea
-               type="text"
-               id="pergunta"
-               placeholder="Digite sua pergunta para a IA"
-               maxlength="500"
-               autocomplete="off"
-        ></textarea>
-        <div id="contador-caracteres">0 / 500</div>
-
-        <button id="enviarBtn" class="btn-gradiente">Clique Aqui</button>
+              <input type="password" id="apiKey" placeholder="Cole sua chave da API aqui">
+        </div>  
+    </div>
+    <!--box pergunta-->
+    <div class="chat-box" id="chat-box">
+      <div class="message bot-message">
+        <p>Olá, pode me chamar de Vang! ;)<br> O que você gostaria de saber?</p>
+      </div>
+      <div id="contador-caracteres">0 / 500</div>
+    </div>
+            
+    <button id="enviarBtn" class="btn-gradiente">Clique Aqui</button>
       </section>
 
-      <section id="resposta-container" style="display: none">
+      <section id="resposta-container">
         <h2>Resposta da IA:</h2>
         <p id="resposta"></p>
-
-        <div class="acoes-resposta">
+       <div class="acoes-resposta">
          <button id="limparBtn">Limpar Resposta</button>
          <button id="copiarBtn">Copiar Resposta</button>
         </div>
       </section>
     </main>
+    <div id="custom-.notificacao" class="custom-.notificacao" style="opacity: 0;">Chave inválida. Por favor, insira sua chave OpenAI.</div>
 
     <footer>
       <p>
-        &copy; 2025 - Projeto 6 - Koru - Assistente de IA: <br/>
-        Parte 1:Kailany Sophia, Sanna Santos Faria, Mateus Wesley, Maria Aparecida, Gabriel Ramalhão, Stephan Lessa, Fernanda Rosas <br/>
-        Parte 2: Sanna Santos Faria & Stephan Lessa.
+        &copy; 2025 - Projeto Koru & Grupo Boticário - Assistente de IA: <br/>
       </p>
     </footer>
     <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
