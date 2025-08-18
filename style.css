@@ -3,43 +3,43 @@
 /* ======================================================= */
 
 :root {
-  --cor-principal: #4a00e0; /* Roxo VangardAI para botões principais */
-  --cor-secundaria: #681eb8; /* Roxo para botões secundários */
-  --cor-fundo-card: #1e1e1e; /* Fundo escuro do card principal */
-  --cor-fundo-chat-box: #ffffff; /* FUNDO BRANCO PARA A ÁREA DE CHAT */
-  --cor-fundo-resposta: #2b2b2b; /* Fundo da área de resposta */
-  --cor-texto-claro: #ffffff; /* Texto claro para fundos escuros */
-  --cor-texto-escuro: #333333; /* Texto escuro para fundos claros */
-  --cor-borda: #dddddd; /* Cor de borda para inputs e elementos */
-  --cor-contador-caracteres: #999999; /* Cor do contador de caracteres */
-  --cor-notificacao-erro: #ff3b30; /* Cor para notificações de erro */
+  --cor-principal: #4a00e0; 
+  --cor-secundaria: #681eb8;
+  --cor-fundo-card: #1e1e1e; 
+  --cor-fundo-chat-box: #ffffff; 
+  --cor-fundo-resposta: #2b2b2b; 
+  --cor-texto-claro: #ffffff; 
+  --cor-texto-escuro: #333333; 
+  --cor-borda: #dddddd; 
+  --cor-contador-caracteres: #999999; 
+  --cor-notificacao-erro: #ff3b30; 
 }
 
 body {
   font-family: Arial, sans-serif;
-  background-color: #f0f2f5; /* Fundo geral da página */
+  background-color: #f0f2f5; 
   margin: 0;
   padding: 0;
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center; /* Centraliza o card verticalmente */
-  min-height: 100vh; /* Garante que o body ocupe a altura total da tela */
+  justify-content: center; 
+  min-height: 100vh; 
 }
 
 /* ======================================================= */
-/* CONTAINER PRINCIPAL DO CHAT - A CAIXA QUE DELIMITA TUDO */
+/* CONTAINER PRINCIPAL DO CHAT */
 /* ======================================================= */
 #chat-window {
-  background-color: var(--cor-fundo-card); /* Fundo escuro unificado */
+  background-color: var(--cor-fundo-card); 
   color: var(--cor-texto-claro);
-  border-radius: 16px; /* Bordas bem arredondadas, como na nIAh */
-  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.4); /* Sombra mais pronunciada */
-  padding: 2.5rem; /* Espaçamento interno generoso para aumentar o campo */
-  box-sizing: border-box; /* Garante que padding e borda sejam incluídos na largura */
+  border-radius: 16px;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.4); 
+  padding: 2.5rem; 
+  box-sizing: border-box; 
   display: flex;
   flex-direction: column;
-  /* Largura definida nas media queries para responsividade */
+
 }
 
 /* ======================================================= */
@@ -48,12 +48,12 @@ body {
 
 .chat-header {
   color: var(--cor-texto-claro);
-  padding-bottom: 1.5rem; /* Espaçamento inferior do cabeçalho */
+  padding-bottom: 1.5rem; 
   text-align: center;
 }
 
 .chat-header h1 {
-  font-size: 2.2rem; /* Tamanho maior para o título principal */
+  font-size: 2.2rem; 
   margin-bottom: 0.5rem;
 }
 
@@ -66,25 +66,25 @@ body {
 
 /* Box chave api */
 .api-key-container {
-  padding-bottom: 1.5rem; /* Espaçamento inferior */
+  padding-bottom: 1.5rem; 
   display: flex;
-  flex-direction: column; /* Coloca label e input em linhas separadas */
-  gap: 0.8rem; /* Espaçamento entre os elementos internos */
+  flex-direction: column; 
+  gap: 0.8rem; 
 }
 
 .api-key-container label {
-  display: block; /* Garante que o label ocupe sua própria linha */
+  display: block; 
   color: var(--cor-texto-claro);
   font-weight: bold;
   font-size: 1rem;
 }
 
 .api-key-container input[type="password"] {
-  width: 100%; /* Ocupa 100% da largura do pai */
-  padding: 0.9rem 1.2rem; /* Aumenta o padding para o campo ser maior */
-  border-radius: 10px; /* Bordas mais arredondadas */
+  width: 100%;
+  padding: 0.9rem 1.2rem;
+  border-radius: 10px; 
   border: 1px solid var(--cor-borda);
-  background-color: #2b2b2b; /* Fundo do input */
+  background-color: #2b2b2b; 
   color: var(--cor-texto-claro);
   font-size: 1rem;
   box-sizing: border-box;
@@ -92,66 +92,64 @@ body {
 
 /* Box de Mensagens (Área de chat principal, agora com fundo branco) */
 .chat-box {
-  background-color: var(--cor-fundo-chat-box); /* FUNDO BRANCO, COMO NA nIAh */
-  border: 1px solid var(--cor-borda); /* Borda clara */
-  border-radius: 12px; /* Bordas arredondadas para a caixa de chat */
-  padding: 1.5rem; /* Espaçamento interno */
+  background-color: var(--cor-fundo-chat-box); 
+  border: 1px solid var(--cor-borda);
+  border-radius: 12px; 
+  padding: 1.5rem; 
   display: flex;
-  flex-direction: column; /* Para alinhar as mensagens verticalmente */
-  gap: 1rem; /* Espaçamento entre as mensagens */
-  margin-bottom: 1.5rem; /* Espaçamento antes do botão */
-  overflow-y: auto; /* Adiciona scroll se houver muitas mensagens */
-  max-height: 50vh; /* Altura máxima para a caixa de chat, pode ajustar */
-  flex-grow: 1; /* Permite que a caixa de chat cresça para preencher espaço */
-  position: relative; /* Necessário para posicionar o chat-input e contador */
+  flex-direction: column; 
+  gap: 1rem; 
+  margin-bottom: 1.5rem; 
+  overflow-y: auto; 
+  max-height: 50vh; 
+  flex-grow: 1; 
+  position: relative; 
 }
 
 /* Estilo para as mensagens individuais (bolhas de chat) */
 .message {
   padding: 0.9rem 1.2rem;
-  max-width: 85%; /* Para que as mensagens não ocupem toda a largura */
-  border-radius: 1.2rem; /* Valor padrão para todos os cantos */
+  max-width: 85%;
+  border-radius: 1.2rem; 
   line-height: 1.5;
   box-sizing: border-box;
-  word-wrap: break-word; /* Quebra palavras longas */
+  word-wrap: break-word; 
 }
 
 .bot-message {
-  background-color: #e0e0e0; /* Fundo claro para mensagens do bot */
-  color: var(--cor-texto-escuro); /* Texto escuro */
-  align-self: flex-start; /* Alinha a bolha à esquerda */
-  border-bottom-left-radius: 0.5rem; /* Pequeno ajuste para o pico */
+  background-color: #e0e0e0; 
+  color: var(--cor-texto-escuro); 
+  align-self: flex-start; 
+  border-bottom-left-radius: 0.5rem; 
 }
 
-/* Você pode adicionar um estilo para o usuário se for usar futuramente */
 .user-message {
-  background-color: var(--cor-principal); /* Cor da VangardAI para o usuário */
+  background-color: var(--cor-principal); 
   color: var(--cor-texto-claro);
-  align-self: flex-end; /* Alinha a bolha à direita */
-  border-bottom-right-radius: 0.5rem; /* Pequeno ajuste para o pico */
+  align-self: flex-end; 
+  border-bottom-right-radius: 0.5rem;
 }
 
-/* Input da Mensagem (AGORA DENTRO DO CHAT-BOX) */
+/* Input da Mensagem (DENTRO DO CHAT-BOX) */
 .chat-input {
-  /* Posicionamento absoluto dentro do chat-box para ficar sempre na parte inferior */
   position: absolute;
-  bottom: 0; /* Alinha na parte inferior do chat-box */
+  bottom: 0; 
   left: 0;
   right: 0;
-  padding: 1rem 1.5rem; /* Padding interno para o input, igual ao da nIAh */
-  background-color: var(--cor-fundo-chat-box); /* Fundo branco, igual ao chat-box */
-  border-top: 1px solid var(--cor-borda); /* Linha divisória fina */
+  padding: 1rem 1.5rem; 
+  background-color: var(--cor-fundo-chat-box); 
+  border-top: 1px solid var(--cor-borda); 
   display: flex;
   align-items: center;
   gap: 10px;
 }
 
 .chat-input input[type="text"] {
-  flex-grow: 1; /* Permite que o input cresça para preencher o espaço */
-  padding: 0.9rem 1.2rem; /* Aumenta o padding para o campo ser maior */
-  border-radius: 10px; /* Bordas mais arredondadas */
+  flex-grow: 1; 
+  padding: 0.9rem 1.2rem; 
+  border-radius: 10px;
   border: 1px solid var(--cor-borda);
-  background-color: #f5f5f5; /* Fundo levemente diferente para o input */
+  background-color: #f5f5f5; 
   color: var(--cor-texto-escuro);
   font-size: 1rem;
   box-sizing: border-box;
@@ -160,28 +158,28 @@ body {
 #contador-caracteres {
   /* Posicionamento relativo ao chat-input */
   position: absolute;
-  right: 2.5rem; /* Ajusta a posição para não sobrepor o texto */
+  right: 2.5rem; 
   font-size: 0.85rem;
   color: var(--cor-contador-caracteres);
   text-align: right;
-  pointer-events: none; /* Garante que não interfira no clique do input */
+  pointer-events: none; 
 }
 
 /* Botão Enviar */
 #enviarBtn.btn-gradiente {
-  width: 100%; /* Ocupa a largura total do pai (#chat-window) */
+  width: 100%; 
   padding: 1rem 2rem;
   border-radius: 10px;
-  margin-top: 1.5rem; /* Espaçamento do elemento acima */
+  margin-top: 1.5rem; 
   font-size: 1.1rem;
 }
 
 /* Área da resposta da IA */
 #resposta-container {
-  background-color: var(--cor-fundo-resposta); /* Fundo mais escuro */
+  background-color: var(--cor-fundo-resposta);
   border-radius: 12px;
   padding: 1.5rem;
-  margin-top: 1.5rem; /* Espaçamento do elemento acima */
+  margin-top: 1.5rem; 
 }
 
 #resposta-container h2 {
@@ -191,14 +189,14 @@ body {
 }
 
 #resposta {
-  background-color: var(--cor-fundo-chat-box); /* Fundo da caixa de texto da resposta */
+  background-color: var(--cor-fundo-chat-box); 
   padding: 1rem;
   border-radius: 8px;
   border: 1px solid var(--cor-borda);
   white-space: pre-wrap;
   line-height: 1.6;
-  min-height: 80px; /* Altura mínima para a área de resposta */
-  color: var(--cor-texto-escuro); /* Texto escuro aqui */
+  min-height: 80px; 
+  color: var(--cor-texto-escuro); 
 }
 
 /* Botões Limpar e Copiar */
@@ -206,15 +204,15 @@ body {
   margin-top: 1rem;
   display: flex;
   gap: 10px;
-  justify-content: flex-end; /* Alinha os botões à direita */
-  flex-direction: row; /* Volta a alinhar em linha para desktop */
+  justify-content: flex-end; 
+  flex-direction: row; 
 }
 
 .acoes-resposta button {
   background-color: var(--cor-secundaria);
   color: var(--cor-texto-claro);
   border: none;
-  border-radius: 8px; /* Bordas arredondadas */
+  border-radius: 8px; 
   padding: 0.8rem 1.2rem;
   cursor: pointer;
   font-size: 0.95rem;
@@ -252,7 +250,7 @@ footer {
   text-align: center;
   color: #999;
   font-size: 0.85rem;
-  padding-top: 2rem; /* Espaçamento superior do rodapé */
+  padding-top: 2rem; 
 }
 
 /* ======================================================= */
@@ -262,10 +260,10 @@ footer {
 /* Dispositivos Móveis (até 600px de largura) */
 @media (max-width: 600px) {
   #chat-window {
-    width: 98%; /* Ocupa quase toda a largura em mobile */
-    padding: 1rem; /* Reduz o padding para telas pequenas */
-    border-radius: 0; /* Bordas retas em telas menores */
-    box-shadow: none; /* Remove a sombra em mobile */
+    width: 98%; 
+    padding: 1rem; 
+    border-radius: 0;
+    box-shadow: none; 
   }
 
   .chat-header h1 {
@@ -281,11 +279,11 @@ footer {
   }
 
   .chat-input {
-    padding: 0.8rem 1rem; /* Padding menor para o input em mobile */
+    padding: 0.8rem 1rem; 
   }
 
   #contador-caracteres {
-    right: 1.5rem; /* Ajusta a posição para o input menor */
+    right: 1.5rem;
   }
 
   .btn-gradiente {
@@ -294,7 +292,7 @@ footer {
   }
 
   .acoes-resposta {
-    flex-direction: column; /* Empilha os botões de resposta verticalmente */
+    flex-direction: column; 
     gap: 0.8rem;
   }
   .acoes-resposta button {
@@ -311,8 +309,8 @@ footer {
 /* Tablets (de 601px a 1024px de largura) */
 @media (min-width: 601px) and (max-width: 1024px) {
   #chat-window {
-    width: 85%; /* Ocupa 85% da largura da tela */
-    max-width: 700px; /* Limite a largura para não ficar muito esticado */
+    width: 85%;
+    max-width: 700px; 
     padding: 2rem;
   }
 
@@ -324,7 +322,7 @@ footer {
 /* Desktops (acima de 1025px de largura) */
 @media (min-width: 1025px) {
   #chat-window {
-    width: 600px; /* Aumenta a largura para desktop, similar à nIAh */
-    max-width: 700px; /* Garante que não fique muito largo em telas gigantes */
+    width: 600px; 
+    max-width: 700px; 
   }
 }
