@@ -80,6 +80,61 @@ button:hover {
   margin-top: 10px;
 }
 
+/* Botões Limpar e Copiar */
+.acoes-resposta {
+  margin-top: 15px;
+  display: flex;
+  gap: 10px;
+  justify-content: flex-end;
+}
+
+#limparBtn {
+  background-color: #681eb8;
+  color: white;
+}
+#limparBtn:hover {
+  background-color: #681eb8;
+}
+
+#copiarBtn {
+  background-color: #681eb8;
+  color: white;
+}
+#copiarBtn:hover {
+  background-color: #681eb8;
+}
+
+#notificacao-container {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  z-index: 1000;
+}
+
+.notificacao {
+  background-color: #681eb8; 
+  color: white;
+  padding: 10px 15px;
+  margin-bottom: 10px;
+  border-radius: 6px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+  opacity: 0;
+  transform: translateY(-10px);
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+#contador-caracteres {
+  font-size: 0.85rem;
+  color: #681eb8;
+  text-align: right;
+  margin-bottom: 12px;
+}
+
+.notificacao.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
 /* Rodapé */
 footer {
   margin-top: 30px;

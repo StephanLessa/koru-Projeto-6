@@ -6,28 +6,39 @@
     <title>Os Vanguardistas - Assistente de IA</title>
     <link rel="stylesheet" href="style.css" />
   </head>
-  <body>
-    <header>
-      <h2 id="grupo-nome">Os Vanguardistas!</h2>
+   <body>
+    <div id="chat-window">
+      <header>
+        <h2 id="grupo-nome">Os Vanguardistas</h2>
+      </header>
+
+      <h2 class="form-title"><strong>Assistente de IA</strong></h2>
     </header>
 
     <main id="conteudo-principal">
       <h1>Assistente de IA</h1>
 
       <section id="formulario">
-        <label for="apiKey">Chave da API:</label>
-        <input
-          type="password"
-          id="apiKey"
-          placeholder="Cole sua chave da API aqui"
-        />
-
-        <label for="pergunta">Pergunte:</label>
-        <input
-          type="text"
-          id="pergunta"
-          placeholder="Digite sua pergunta para a IA"
-        />
+        <div>
+          <label for="apiKey">Chave da API:</label>
+            <div class="input-group">
+              <input
+                type="password"
+                id="apiKey"
+                placeholder="Cole sua chave da API aqui"
+                autocomplete="off"
+              />
+              <button class="btn-gradiente btn-invisivel">Salvar</button>
+        </div>  
+        </div>
+         <label for="pergunta">Pergunte:</label>
+        <textarea
+         id="pergunta"
+         placeholder="Digite sua pergunta para a IA"
+         rows="4"
+         maxlength="500"
+        ></textarea>
+        <div id="contador-caracteres">0 / 500</div>
 
         <button id="enviarBtn" class="btn-gradiente">Clique Aqui</button>
       </section>
@@ -35,6 +46,11 @@
       <section id="resposta-container" style="display: none">
         <h2>Resposta da IA:</h2>
         <p id="resposta"></p>
+
+        <div class="acoes-resposta">
+         <button id="limparBtn">Limpar Resposta</button>
+         <button id="copiarBtn">Copiar Resposta</button>
+        </div>
       </section>
     </main>
 
@@ -49,5 +65,6 @@
 
     <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
     <script src="script.js"></script>
+    <div id="notificacao-container"></div>
   </body>
 </html>
