@@ -15,4 +15,4 @@ Mateus
 Fernanda e Gabriel
 
 ### Parte 2 
-Sanna e Stephan
+Sanna, Stephan e Matheus
