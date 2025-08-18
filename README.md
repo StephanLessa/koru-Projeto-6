@@ -3,16 +3,16 @@
 ### Parte 1
 
 ### Estrutura HTML Básica
-#### Maria
+Maria
 
 ### Interface de Entrada
-#### Sanna e Stephan
+Sanna e Stephan
 
 ### Exibição da Resposta
-#### Mateus
+Mateus
 
 ### Integração com API da IA
-#### Fernanda e Gabriel
+Fernanda e Gabriel
 
 ### Parte 2 
 Sanna e Stephan
