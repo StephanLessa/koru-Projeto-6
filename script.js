@@ -1,3 +1,22 @@
+const perguntaInput = document.getElementById("pergunta");
+const contadorCaracteres = document.getElementById("contador-caracteres");
+const limiteCaracteres = 500;
+
+perguntaInput.addEventListener("input", () => {
+  const caracteresDigitados = perguntaInput.value.length;
+  contadorCaracteres.textContent = `${caracteresDigitados} / ${limiteCaracteres}`;
+
+  if (caracteresDigitados > limiteCaracteres) {
+    contadorCaracteres.style.color = "red";
+  } else {
+    contadorCaracteres.style.color = "#999999";
+  }
+});
+
+const chatBox = document.getElementById("chat-box");
+chatBox.style.height = "400px";
+chatBox.style.overflowY = "scroll";
+
 // Notificações
 function mostrarNotificacao(mensagem, duracao = 3000) {
   const container = document.getElementById("notificacao-container");
