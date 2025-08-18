@@ -2,7 +2,7 @@
 
 ### Estrutura HTML Básica
 
-#### Kailany e Maria
+#### Maria
 
 ### Interface de Entrada
 
