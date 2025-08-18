@@ -1,17 +1,18 @@
 # koru-Projeto-6
 
-### Estrutura HTML Básica
+### Parte 1
 
-#### Kailany e Maria
+### Estrutura HTML Básica
+Maria
 
 ### Interface de Entrada
-
-#### Sanna e Stephan
+Sanna e Stephan
 
 ### Exibição da Resposta
-
-#### Mateus
+Mateus
 
 ### Integração com API da IA
+Fernanda e Gabriel
 
-#### Fernanda e Gabriel
+### Parte 2 
+Sanna e Stephan
