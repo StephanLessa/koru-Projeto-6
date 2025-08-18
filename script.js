@@ -51,20 +51,33 @@ document.getElementById("enviarBtn").addEventListener("click", async () => {
   console.log("Pergunta:", pergunta);
 
   try {
-    const resposta = await fetch("https://api.openai.com/v1/chat/completions", {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-        Authorization: `Bearer ${apiKey}`,
-      },
-      body: JSON.stringify({
-        model: "gpt-4o-mini",
-        messages: [{ role: "user", content: pergunta }],
-      }),
-    });
+    const resposta = await fetch(
+      "https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash-latest:generateContent?key=" +
+        apiKey,
+      {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+          contents: [
+            {
+              parts: [
+                {
+                  text: pergunta,
+                },
+              ],
+            },
+          ],
+        }),
+      }
+    );
 
     const data = await resposta.json();
-    respostaTexto.innerHTML = marked.parse(data.choices[0].message.content);
+
+    const respostaIA = data.candidates[0].content.parts[0].text;
+
+    respostaTexto.innerHTML = marked.parse(respostaIA);
 
     respostaContainer.style.display = "block";
   } catch (error) {
