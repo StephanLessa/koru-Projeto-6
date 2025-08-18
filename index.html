@@ -1,65 +1,68 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Os Vanguardistas - Assistente de IA</title>
-    <link rel="stylesheet" href="style.css" />
-  </head>
-   <body>
-    <div id="chat-window">
-      <div class="chat-header">
-        <h1>VangardAi </h1>
-        <h3>Seu assistente de IA :) </h3>
-      </div>
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Os Vanguardistas - Assistente de IA</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+  <div id="chat-window">
+    <div class="chat-header">
+      <h1>VangardAi </h1>
+      <h3>Seu assistente de IA :) </h3>
+    </div>
 
     <div class="api-key-container">
-       <section id="formulario">
+      <section id="formulario">
         <div>
           <label for="apiKey">Chave da API:</label>
-              <input 
-              type="password" 
-              id="apiKey" 
-              placeholder="Cole sua chave da API aqui">
+          <input type="password" id="apiKey" placeholder="Cole sua chave da API aqui">
         </div>
-       </section>
+      </section>
     </div>
-    
+
     <!--box pergunta-->
 
     <div class="chat-box" id="chat-box">
       <div class="message bot-message">
         <p>Olá, pode me chamar de Vang! ;) <br> O que você gostaria de saber?</p>
       </div>
-      <div class="chat-input"> 
-        <input type="text" id="pergunta" placeholder="Digite sua mensagem..." />
-        <div id="contador-caracteres">0 / 500</div>
+    </div>
+    <section class="chat-input-container">
+      <div class="chat-input">
+        <textarea rows="1" id="pergunta" placeholder="Digite sua mensagem..."></textarea>
+        <button id="enviarBtn" class="btn-icone">
+          &#x27A4;
+        </button>
       </div>
-            
-    <button id="enviarBtn" class="btn-gradiente"> Enviar </button>
-      </section>
+      <div class="contador-caracteres" id="contador-caracteres">0 / 500</div>
+    </section>
 
-      <section id="resposta-container">
-        <h2>Resposta da IA:</h2>
-        <p id="resposta"></p>
-       <div class="acoes-resposta">
-         <button id="limparBtn">Limpar Resposta</button>
-         <button id="copiarBtn">Copiar Resposta</button>
-        </div>
-      </section>
+    <!-- Resposta da IA -->
+    <section id="resposta-container" style="display:none;">
+      <h2>Resposta da IA:</h2>
+      <p id="resposta"></p>
+      <div class="acoes-resposta">
+        <button id="limparBtn">Limpar Resposta</button>
+        <button id="copiarBtn">Copiar Resposta</button>
       </div>
-    
-    <div id="custom-notificacao" 
-    class="custom-notificacao" 
-    style="opacity: 0;">Chave inválida. Por favor, insira sua chave OpenAI.
-  </div>
+    </section>
+
+
+    <div id="custom-notificacao" class="custom-notificacao" style="opacity: 0;">Chave inválida. Por favor, insira sua
+      chave OpenAI.
+    </div>
 
     <footer>
-      <p>&copy; 2025 - Projeto Koru & Grupo Boticário - Assistente de IA <br/></p>
+      <p>&copy; 2025 - Projeto Koru & Grupo Boticário - Assistente de IA <br /></p>
     </footer>
     <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
     <script src="script.js"></script>
     <div id="notificacao-container"></div>
-  </body>
-  </main>
+</body>
+</main>
+
 </html>
